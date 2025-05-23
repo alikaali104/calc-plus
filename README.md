@@ -26,7 +26,7 @@ This web app supports both basic arithmetic operations and advanced functions su
 
 ## 📸 Preview
 
-![Calc+ Preview](.https://github.com/user-attachments/assets/6882f426-688d-487c-9d13-0ae8c65af765)
+![Calc+ Preview](.https://github.com/user-attachmen![ChatGPT Image May 23, 2025, 07_01_42 PM](https://github.com/user-attachments/assets/48538ac9-d483-4d01-9d58-ab62aa74bd80)
 
 
 ## 💡 How to Run
