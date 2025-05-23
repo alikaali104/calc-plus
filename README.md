@@ -26,8 +26,7 @@ This web app supports both basic arithmetic operations and advanced functions su
 
 ## 📸 Preview
 
-![Calc+ Preview](https://github.com/user-attachments/assets/48538ac9-d483-4d01-9d58-ab62aa74bd80)
-
+[![Calc+ Preview](./preview.png)](https://github.com/user-attachments/assets/48538ac9-d483-4d01-9d58-ab62aa74bd80)
 
 ## 💡 How to Run
 
