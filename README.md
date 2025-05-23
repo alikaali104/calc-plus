@@ -30,7 +30,7 @@ This web app supports both basic arithmetic operations and advanced functions su
 
 
 Credits
-Developed by: Alika Ali & Jonathan Muravchik
-Course: CS213 – Web Development & Programming
-Institution: Bentley University | Spring 2025
-Instructor: Professor Masloff
+- Developed by: Alika Ali & Jonathan Muravchik
+- Course: CS213 – Web Development & Programming
+- Institution: Bentley University | Spring 2025
+- Instructor: Professor Masloff
