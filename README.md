@@ -28,15 +28,6 @@ This web app supports both basic arithmetic operations and advanced functions su
 
 [![Calc+ Preview](./preview.png)](https://github.com/user-attachments/assets/48538ac9-d483-4d01-9d58-ab62aa74bd80)
 
-## 💡 How to Run
-
-1. Clone the repository or download the ZIP
-2. Open `index.html` in your browser
-
-```bash
-git clone https://github.com/yourusername/calc-plus.git
-cd calc-plus
-open index.html
 
 Credits
 Developed by: Alika Ali & Jonathan Muravchik
