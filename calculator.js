@@ -1,70 +1,48 @@
-<html>
-<head>
-<title>calculator.js</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style type="text/css">
-.s0 { color: #7a7e85;}
-.s1 { color: #bcbec4;}
-.s2 { color: #cf8e6d;}
-.s3 { color: #bcbec4;}
-.s4 { color: #6aab73;}
-.s5 { color: #2aacb8;}
-</style>
-</head>
-<body bgcolor="#1e1f22">
-<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
-<tr><td><center>
-<font face="Arial, Helvetica" color="#000000">
-calculator.js</font>
-</center></td></tr></table>
-<pre><span class="s0">// Adds a value (number/operator) to the display</span>
-<span class="s2">function </span><span class="s1">appendValue</span><span class="s3">(</span><span class="s1">value</span><span class="s3">) {</span>
-    <span class="s1">document</span><span class="s3">.</span><span class="s1">getElementById</span><span class="s3">(</span><span class="s4">'display'</span><span class="s3">).</span><span class="s1">value </span><span class="s3">+= </span><span class="s1">value</span><span class="s3">;</span>
-<span class="s3">}</span>
+// Adds a value (number/operator) to the display
+function appendValue(value) {
+    document.getElementById('display').value += value;
+}
 
-<span class="s0">// Clears the display</span>
-<span class="s2">function </span><span class="s1">clearDisplay</span><span class="s3">() {</span>
-    <span class="s1">document</span><span class="s3">.</span><span class="s1">getElementById</span><span class="s3">(</span><span class="s4">'display'</span><span class="s3">).</span><span class="s1">value </span><span class="s3">= </span><span class="s4">''</span><span class="s3">;</span>
-<span class="s3">}</span>
+// Clears the display
+function clearDisplay() {
+    document.getElementById('display').value = '';
+}
 
-<span class="s0">// Calculates the result of the expression in the display</span>
-<span class="s2">function </span><span class="s1">calculateResult</span><span class="s3">() {</span>
-    <span class="s2">try </span><span class="s3">{</span>
-        <span class="s2">const </span><span class="s1">display </span><span class="s3">= </span><span class="s1">document</span><span class="s3">.</span><span class="s1">getElementById</span><span class="s3">(</span><span class="s4">'display'</span><span class="s3">);</span>
-        <span class="s1">display</span><span class="s3">.</span><span class="s1">value </span><span class="s3">= </span><span class="s1">eval</span><span class="s3">(</span><span class="s1">display</span><span class="s3">.</span><span class="s1">value</span><span class="s3">); </span><span class="s0">// Evaluates the expression</span>
-    <span class="s3">} </span><span class="s2">catch </span><span class="s3">(</span><span class="s1">error</span><span class="s3">) {</span>
-        <span class="s1">alert</span><span class="s3">(</span><span class="s4">'Invalid Calculation'</span><span class="s3">);</span>
-        <span class="s1">clearDisplay</span><span class="s3">();</span>
-    <span class="s3">}</span>
-<span class="s3">}</span>
+// Calculates the result of the expression in the display
+function calculateResult() {
+    try {
+        const display = document.getElementById('display');
+        display.value = eval(display.value); // Evaluates the expression
+    } catch (error) {
+        alert('Invalid Calculation');
+        clearDisplay();
+    }
+}
 
-<span class="s0">// Calculates the square root of the current value</span>
-<span class="s2">function </span><span class="s1">calculateSquareRoot</span><span class="s3">() {</span>
-    <span class="s2">try </span><span class="s3">{</span>
-        <span class="s2">const </span><span class="s1">display </span><span class="s3">= </span><span class="s1">document</span><span class="s3">.</span><span class="s1">getElementById</span><span class="s3">(</span><span class="s4">'display'</span><span class="s3">);</span>
-        <span class="s1">display</span><span class="s3">.</span><span class="s1">value </span><span class="s3">= </span><span class="s1">Math</span><span class="s3">.</span><span class="s1">sqrt</span><span class="s3">(</span><span class="s1">eval</span><span class="s3">(</span><span class="s1">display</span><span class="s3">.</span><span class="s1">value</span><span class="s3">));</span>
-    <span class="s3">} </span><span class="s2">catch </span><span class="s3">(</span><span class="s1">error</span><span class="s3">) {</span>
-        <span class="s1">alert</span><span class="s3">(</span><span class="s4">'Invalid Input for Square Root'</span><span class="s3">);</span>
-        <span class="s1">clearDisplay</span><span class="s3">();</span>
-    <span class="s3">}</span>
-<span class="s3">}</span>
+// Calculates the square root of the current value
+function calculateSquareRoot() {
+    try {
+        const display = document.getElementById('display');
+        display.value = Math.sqrt(eval(display.value));
+    } catch (error) {
+        alert('Invalid Input for Square Root');
+        clearDisplay();
+    }
+}
 
-<span class="s0">// Converts current value to a percentage (divides by 100)</span>
-<span class="s2">function </span><span class="s1">calculatePercentage</span><span class="s3">() {</span>
-    <span class="s2">try </span><span class="s3">{</span>
-        <span class="s2">const </span><span class="s1">display </span><span class="s3">= </span><span class="s1">document</span><span class="s3">.</span><span class="s1">getElementById</span><span class="s3">(</span><span class="s4">'display'</span><span class="s3">);</span>
-        <span class="s1">display</span><span class="s3">.</span><span class="s1">value </span><span class="s3">= </span><span class="s1">eval</span><span class="s3">(</span><span class="s1">display</span><span class="s3">.</span><span class="s1">value</span><span class="s3">) / </span><span class="s5">100</span><span class="s3">;</span>
-    <span class="s3">} </span><span class="s2">catch </span><span class="s3">(</span><span class="s1">error</span><span class="s3">) {</span>
-        <span class="s1">alert</span><span class="s3">(</span><span class="s4">'Invalid Input for Percentage'</span><span class="s3">);</span>
-        <span class="s1">clearDisplay</span><span class="s3">();</span>
-    <span class="s3">}</span>
-<span class="s3">}</span>
+// Converts current value to a percentage (divides by 100)
+function calculatePercentage() {
+    try {
+        const display = document.getElementById('display');
+        display.value = eval(display.value) / 100;
+    } catch (error) {
+        alert('Invalid Input for Percentage');
+        clearDisplay();
+    }
+}
 
-<span class="s0">// Inserts the value of π (up to 8 decimal places) into the display</span>
-<span class="s2">function </span><span class="s1">insertPi</span><span class="s3">() {</span>
-    <span class="s2">const </span><span class="s1">display </span><span class="s3">= </span><span class="s1">document</span><span class="s3">.</span><span class="s1">getElementById</span><span class="s3">(</span><span class="s4">'display'</span><span class="s3">);</span>
-    <span class="s1">display</span><span class="s3">.</span><span class="s1">value </span><span class="s3">+= </span><span class="s1">Math</span><span class="s3">.</span><span class="s1">PI</span><span class="s3">.</span><span class="s1">toFixed</span><span class="s3">(</span><span class="s5">8</span><span class="s3">);</span>
-<span class="s3">}</span>
-</pre>
-</body>
-</html>
+// Inserts the value of π (up to 8 decimal places) into the display
+function insertPi() {
+    const display = document.getElementById('display');
+    display.value += Math.PI.toFixed(8);
+}
