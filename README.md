@@ -26,7 +26,8 @@ This web app supports both basic arithmetic operations and advanced functions su
 
 ## 📸 Preview
 
-🔗 [Click here to view Calc+ live](https://alikaali104.github.io/calc-plus/)
+👉 **Try it live here:** [https://alikaali104.github.io/calc-plus/](https://alikaali104.github.io/calc-plus/)
+
 
 Credits
 - Developed by: Alika Ali & Jonathan Muravchik
